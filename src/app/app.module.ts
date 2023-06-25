@@ -11,6 +11,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { HttpClientModule } from '@angular/common/http';
+/*Graficos circulares*/
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InterceptorService } from './service/interceptor.service';
+import { environment } from '../environments/environments';
+import { HomeComponent } from './components/home/home.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -22,13 +31,24 @@ import { SkillsComponent } from './components/skills/skills.component';
     HeaderComponent,
     LoginComponent,
     ProyectosComponent,
-    SkillsComponent
+    SkillsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    /*Graficos Circulares*/
+    NgCircleProgressModule.forRoot({}),
+    //provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
+    
   ],
-  providers: [],
+  providers: [
+    InterceptorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
