@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InterceptorService } from './service/interceptor.service';
-import { environment } from '../environments/environments';
+import { environment } from '../environments/environment';
 import { HomeComponent } from './components/home/home.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideStorage,getStorage } from '@angular/fire/storage';
@@ -42,7 +42,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     HttpClientModule,
     /*Graficos Circulares*/
     NgCircleProgressModule.forRoot({}),
-    //provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
     
   ],

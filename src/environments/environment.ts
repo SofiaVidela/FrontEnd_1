@@ -8,4 +8,7 @@ export const environment = {
     authDomain: 'frontendsvv.firebaseapp.com',
     messagingSenderId: '45877004024',
   },
+  production: true,
+     URL: 'http://localhost:8080/'
+  //URL: 'https://backendsvv.onrender.com/'
 };
