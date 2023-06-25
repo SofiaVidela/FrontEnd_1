@@ -9,6 +9,6 @@ export const environment = {
     messagingSenderId: '45877004024',
   },
   production: true,
-     URL: 'http://localhost:8080/'
-  //URL: 'https://backendsvv.onrender.com/'
+     //URL: 'http://localhost:8080/'
+  URL: 'https://backendsvv.onrender.com/'
 };
