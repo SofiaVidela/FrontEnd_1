@@ -8,7 +8,13 @@ export const environment = {
     authDomain: 'frontendsvv.firebaseapp.com',
     messagingSenderId: '45877004024',
   },
+<<<<<<< HEAD
   production: false,
      //URL: 'http://localhost:8080/'
   URL: 'https://backendsvv.onrender.com/'
+=======
+  production: true,
+     URL: 'http://localhost:8080/'
+  //URL: 'https://backendsvv.onrender.com/'
+>>>>>>> parent of 7015709 (Update environment.ts)
 };
